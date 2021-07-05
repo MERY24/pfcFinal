@@ -9,10 +9,9 @@ if (!isset($_SESSION['alogin']))
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-    <title>Online Quiz - Quiz List</title>
+    <title>Liste Test</title>
     <link href="../passer.css" rel="stylesheet" type="text/css">
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-    <link href="quiz.css" rel="stylesheet" type="text/css">
     <link href="./css/viewsub.css" rel="stylesheet" type="text/css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
@@ -25,7 +24,7 @@ include("../database.php");
     $sql=mysqli_query($con,"select * from mst_test");
 
 
-    echo"<tr><th><a class='btn btn-danger' href=\"testadd.php\"> ADD Test</a>&emsp;&emsp;</th></tr>";
+
 
 
     echo " <div class='main'>";

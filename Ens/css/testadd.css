@@ -27,7 +27,7 @@ body{
     align-items: center;
     text-align: center;
 
-    
+
 }
 
 .for{
@@ -54,29 +54,29 @@ body{
 
 }
 .tab{
-    background-color: rgba(3, 133, 133, 0.63) !important;  
-      border-radius: 25px;
-   /* height: 400px;*/
-      margin-top: 30px;
-      position: relative;
-     /* overflow: auto  ;*/
-    
-  }
- .tab::-webkit-scrollbar {
-      width: 20px;
-    }
+    background-color: rgba(3, 133, 133, 0.63) !important;
+    border-radius: 25px;
+    /* height: 400px;*/
+    margin-top: 30px;
+    position: relative;
+    /* overflow: auto  ;*/
+
+}
+.tab::-webkit-scrollbar {
+    width: 20px;
+}
 .tab::-webkit-scrollbar-track {
-      background-color: transparent;
-    }
+    background-color: transparent;
+}
 .tab::-webkit-scrollbar-thumb {
-      background-color: #bbbcbd;
-      border-radius: 20px;
-      border: 6px solid transparent;
-      background-clip: content-box;
-    }
+    background-color: #bbbcbd;
+    border-radius: 20px;
+    border: 6px solid transparent;
+    background-clip: content-box;
+}
 .tab::-webkit-scrollbar-thumb:hover {
-      background-color: #d6dee1;
-    }
+    background-color: #d6dee1;
+}
 
 
 
@@ -93,5 +93,4 @@ a:hover {
     color: white;
 
 }
-
 

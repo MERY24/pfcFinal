@@ -12,8 +12,8 @@ error_reporting(1);
 ?>
 
 <link href="css/testadd.css" rel="stylesheet" type="text/css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">    
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 <?php
 extract($_POST);
 
@@ -74,7 +74,7 @@ if($_POST[submit]=='Save' || strlen($_POST['testid'])>0 )
 </script>
 
 <div class="main"  >
- <h2 class='text-center bg-primary'>ADD Question</h2>
+    <h2 class='text-center bg-primary'>ADD Question</h2>
     <div class="forq" style="margin:100px">
         <form name="form1" method="post" onSubmit="return check();">
             <div class="tab">

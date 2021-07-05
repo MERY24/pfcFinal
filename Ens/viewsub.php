@@ -20,9 +20,7 @@ include("header.php");
 include("../database.php");
 if (!isset($_SESSION['alogin']))
 {
-    echo "<br><h2>You are not Logged On Please Login to Access this Page</h2>";
-    echo "<a href=index.php><h3 align=center>Click Here for Login</h3></a>";
-    exit();
+    include ("logproblem.php");
 }
 {
     $sql=mysqli_query($con,"select * from mst_subject");
@@ -73,4 +71,3 @@ if (!isset($_SESSION['alogin']))
 </script>
 </body>
 </html>
-

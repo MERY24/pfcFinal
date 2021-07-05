@@ -10,7 +10,7 @@ body {
     overflow: overlay;
 }
 .container{
-    min-height: 90vh;
+    min-height: 100vh;
     background: linear-gradient(rgba(0,0,0,0.4),transparent),url("../image/uni.jpeg");
     background-size: cover;
     background-position: bottom;
@@ -62,9 +62,25 @@ body {
     width : 380px;
     padding: 20px;
 }
+.create_form select{
+    font-family: 'Open Sans', sans-serif ,Mulish;
+    font-size: 18px;
+    line-height: 10px;
+    color: #000;
+    margin: 12px;
+    border-radius: 40px;
+    background: #E4EBF7;
+    outline: none;
+    border:none;
+    position: static;
+    height : 48px;
+    width : 380px;
+    padding-left: 20px;
+}
 
 .create_form button{
     align-items: center;
+    align-self: center;
     width: 150px;
     height: 50px;
     color : #E4EBF7;
@@ -85,6 +101,7 @@ body {
     font-size: 18px;
     padding: 8px;
     margin-bottom: 20px;
+    margin-left: 50px;
 }
 .label{
     font-family: 'Open Sans', sans-serif ,Mulish;

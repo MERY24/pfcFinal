@@ -28,4 +28,3 @@ include("header.php")
     </form>
     <script src="valid.js"></script>
 </div>
-

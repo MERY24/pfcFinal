@@ -37,6 +37,3 @@ function pass_Verify(){
 		return true;
 	}
 }
-
-
-

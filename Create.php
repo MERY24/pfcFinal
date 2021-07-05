@@ -31,7 +31,13 @@ include('header.php');?>
 
        <input type="text" name="spec" placeholder="Spécialité/Filière">
 
-      <input type="text" id="niveau" name="niv" placeholder="Niveau">
+      <select class="form-select form-control" id="niveau" name="niv" placeholder="niveau">
+          <option >L1</option>
+          <option value="1">L2</option>
+          <option value="2">L3</option>
+          <option value="3">M1</option>
+          <option value="3">M2</option>
+      </select>
 
     <input type="text" name="loginid" placeholder="Matricule Universitaire">
 

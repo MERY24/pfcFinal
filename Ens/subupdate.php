@@ -9,11 +9,11 @@ if (!isset($_SESSION['alogin']))
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<title>Online Quiz - Quiz List</title>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-<link href="quiz.css" rel="stylesheet" type="text/css">
-<link href="./css/subAdd.css" rel="stylesheet" type="text/css">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <title>Modifier Modules</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+    <link href="./css/subAdd.css" rel="stylesheet" type="text/css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 
 </head>
 <body>
@@ -22,7 +22,7 @@ include("header.php");
 include("../database.php");
 
 extract($_REQUEST);
- $id=$_GET['sub_id'];
+$id=$_GET['sub_id'];
 $q=mysqli_query($con,"select * from mst_subject where sub_id='$id'");
 $res=mysqli_fetch_assoc($q);
 
@@ -30,17 +30,20 @@ $res=mysqli_fetch_assoc($q);
 if(isset($update))
 {
 
-$query="update mst_subject SET sub_name='$subname', niv='$lvel' where sub_id='$id'";
-mysqli_query($con,$query);
-echo "records updated";	
-	
-	}
+    $query="update mst_subject SET sub_name='$subname' where sub_id='$id'";
+    mysqli_query($con,$query);
+    echo"<div class='main'>";
+    echo "<br><br><br><div class=head1>Module est mis à jour</div>";
+    exit;
+    echo"</div>";
+
+}
 
 
 
 ?>
 <div class="main">
-  <div class="ajouter" >
+    <div class="ajouter" >
         <h1>Mettre à Jour Module</h1>
         <form name="form1" method="post" onSubmit="return check();">
             <table class="table table-borderless">
@@ -76,4 +79,3 @@ echo "records updated";
 
 </body>
 </html>
-
