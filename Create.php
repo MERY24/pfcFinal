@@ -29,14 +29,14 @@ include('header.php');?>
 
     <input autocomplete="off" type="text" name="email" placeholder="Email">
 
-       <input type="text" name="spec" placeholder="Spécialité/Filière">
+       <input type="text" name="spec" placeholder="Spécialité/Filière" value="Informatique">
 
       <select class="form-select form-control" id="niveau" name="niv" placeholder="niveau">
-          <option >L1</option>
-          <option value="1">L2</option>
-          <option value="2">L3</option>
-          <option value="3">M1</option>
-          <option value="3">M2</option>
+          <option value="L1">L1</option>
+          <option value="L2">L2</option>
+          <option value="L3">L3</option>
+          <option value="M1">M1</option>
+          <option value="M2">M2</option>
       </select>
 
     <input type="text" name="loginid" placeholder="Matricule Universitaire">

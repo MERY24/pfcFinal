@@ -1,65 +1,67 @@
+
+
+
 function validate() {
-    var result = "";
-
-    result += validateEmail();
-    result += validateFil();
-    result += validateMat();
-    result += validatePassword();
-
-
-
+    var name = document.forms["formR"]["nom"];
+    var pname = document.forms["formR"]["prenom"];
+    var email = document.forms["formR"]["email"];
+    var mat = document.forms["formR"]["loginid"];
+    var niv = document.forms["formR"]["niv"];
+    var spec = document.forms["formR"]["spec"];
+    var password = document.forms["formR"]["pass"];
 
 
-    if (result == "") return true;
 
-    alert(result);
-    return false;
+    if (name.value == "") {
+        window.alert("Veuillez insérer votre nom.");
+        name.focus();
+        return false;
+    }
+
+    if (pname.value == "") {
+        window.alert("Veuillez insérer votre prénom.");
+        pname.focus();
+        return false;
+    }
+
+    if (email.value == "") {
+        window.alert(
+            "Veuillez insérer votre e-mail .");
+        email.focus();
+        return false;
+    }
+
+    if (spec.value == "") {
+        window.alert(
+            "Veuillez insérer votre specialité.");
+        spec.focus();
+        return false;
+    }
+    if (mat.value == "") {
+        window.alert(
+            "Veuillez insérer votre matricule");
+        mat.focus();
+        return false;
+    }
+
+    if (password.value == "" ) {
+        window.alert("Veuillez insérer votre mot de passe ");
+        password.focus();
+        return false;
+    }
+
+    if (niv.selectedIndex < 1) {
+        alert("Please enter your course.");
+        what.focus();
+        return false;
+    }
+
+
+
+
+
+    return true;
 }
-
-
-
-function validatePassword() {
-    var password = valueOf("pass");
-    var retype = valueOf("password-confirm");
-
-    if (password.length < 6)
-        return "\n" +
-            "Le mot de passe doit comporter au moins 6 caractères.\n";
-
-    if (password != retype)
-        return "Les mots de passe ne correspondent pas.\n";
-    return "";
-}
-function validateMat() {
-    var matricule = valueOf("loginid");
-
-
-    if (matricule.length < 8)
-        return "Le matricule doit comporter au moins 8 numéros.\n";
-
-}
-
-function validateFil() {
-    var spec = valueOf("spec");
-
-
-    if (spec.length <= 0)
-        return "Veuillez inserer votre specialité.\n";
-
-}
-
-function validateEmail() {
-    var email = valueOf("email");
-
-
-    if (email.indexOf('@') == -1)
-        return "L'e-mail doit être une adresse valide.\n";
-
-}
-function valueOf(name) {
-    return document.getElementsByName(name)[0].value;
-}
-
 
 
 

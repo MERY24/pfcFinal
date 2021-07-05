@@ -20,7 +20,7 @@ $rs1=mysqli_query($con,"select * from mst_subject where sub_id=$subid");
 $row1=mysqli_fetch_array($rs1);
 
     echo " <div class='main'>";
-    echo " <h1 bott >Choisir Test</h1>";
+    echo " <h1 bott >Choisir Examen</h1>";
     echo " <div class='down'>";
     echo " <div class='tab'>";
     echo "<table class='table table-borderless table-hover'>";
@@ -34,7 +34,7 @@ $row1=mysqli_fetch_array($rs1);
 $rs=mysqli_query($con,"select * from mst_test where sub_id=$subid and lvl in  (select niv from mst_user where loginMat=$id and mst_test.lvl=mst_user.niv)");
 if(mysqli_num_rows($rs)<1)
 {
-    echo "<td><h2>There is No test</h2></td>";
+    echo "<td><h2>Il N'y a Pas D'Examen Dans Ce Module Pour l'instant </h2></td>";
     exit;
 }
 

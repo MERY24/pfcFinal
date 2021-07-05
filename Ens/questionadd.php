@@ -127,7 +127,7 @@ if($_POST[submit]=='Save' || strlen($_POST['testid'])>0 )
                     <tr>
                         <td height="26"><strong>Entrez L'Indice De La Bonne Réponse</strong></td>
                         <td>&nbsp;</td>
-                        <td><input style="border-radius: 25px;" class="form-control"  name="anstrue" type="text" id="anstrue" size="50" maxlength="50"></td>
+                        <td><input style="border-radius: 25px;" class="form-control"  name="anstrue" type="text" id="anstrue" size="50" maxlength="50" placeholder="Exp: 1 / 2 / 3 ou 4"></td>
                     </tr>
                     <tr>
                         <td height="26"></td>

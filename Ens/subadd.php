@@ -46,7 +46,7 @@ extract($_POST);
         $rs=mysqli_query($con,"select * from mst_subject where sub_name='$subname'");
         if (mysqli_num_rows($rs)>0)
         {
-            echo "<br><br><br><div class=head1>Subject Already Exists</div>";
+            echo "<br><br><br><div class=head1>Module Déjà Existant </div>";
             exit;
         }
         mysqli_query($con,"insert into mst_subject(sub_name,niv) values ('$subname','$lvel')") or die(mysqli_error());
@@ -70,8 +70,16 @@ extract($_POST);
 
                 <tr>
                     <td height="26"> </td>
-                    <td><input style="display: flex;justify-content: center;" class="form-control" name="lvel" placeholder="Niveau" type="text"  </td>
-                    <td></td>
+                    <td>
+                        <select class="form-select form-control" id="lvel" name="lvel">
+                            <option value="L1">L1</option>
+                            <option value="L2">L2</option>
+                            <option value="L3">L3</option>
+                            <option value="M1">M1</option>
+                            <option value="M2">M2</option>
+                        </select>
+                    </td>
+                    <td> </td>
                 </tr>
                 <tr>
                     <td height="26"></td>

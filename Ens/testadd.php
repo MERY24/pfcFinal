@@ -83,7 +83,14 @@ if($_POST[submit]=='Save' || strlen($_POST['subid'])>0 )
                 <tr>
                     <td height="26"><div ><strong>Entrez Le Niveau De Cet Examen </strong></div></td>
                     <td>&nbsp;</td>
-                    <td><input style="border-radius: 25px;"class="form-control" name="lvel" type="text" id="lvel"></td>
+                    <td> <select style="border-radius: 25px" class="form-select form-control" id="lvel" name="lvel">
+                            <option value="L1">L1</option>
+                            <option value="L2">L2</option>
+                            <option value="L3">L3</option>
+                            <option value="M1">M1</option>
+                            <option value="M2">M2</option>
+                        </select>
+                    </td>
                 </tr>
                 <tr>
                     <td height="26"></td>
