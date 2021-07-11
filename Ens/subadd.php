@@ -49,7 +49,7 @@ extract($_POST);
             echo "<br><br><br><div class=head1>Module Déjà Existant </div>";
             exit;
         }
-        mysqli_query($con,"insert into mst_subject(sub_name,niv) values ('$subname','$lvel')") or die(mysqli_error());
+        mysqli_query($con,"insert into mst_subject(sub_name) values ('$subname')") or die(mysqli_error());
         $submit="";
         echo"<div class='main'>";
         echo "<br><br><br><div class=head1>Module  <b> \"$subname \"</b> Ajouté. <br> <br> <a href='subadd.php'>Cliquez ici pour ajouter un autre module</a></div>";
@@ -70,15 +70,7 @@ extract($_POST);
 
                 <tr>
                     <td height="26"> </td>
-                    <td>
-                        <select class="form-select form-control" id="lvel" name="lvel">
-                            <option value="L1">L1</option>
-                            <option value="L2">L2</option>
-                            <option value="L3">L3</option>
-                            <option value="M1">M1</option>
-                            <option value="M2">M2</option>
-                        </select>
-                    </td>
+                    <td></td>
                     <td> </td>
                 </tr>
                 <tr>

@@ -19,7 +19,7 @@ include("header.php");
 include("database.php");
 $id=$_SESSION['login'];
 {
-    $rs=mysqli_query($con,"select * from mst_subject where niv in (select niv from mst_user where loginMat=$id and mst_subject.niv=mst_user.niv)");
+    $rs=mysqli_query($con,"select * from mst_subject ");
 
 
     echo " <div class='main'>";

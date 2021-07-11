@@ -22,7 +22,7 @@ if($_POST[submit]=='Save' || strlen($_POST['subid'])>0 )
     extract($_POST);
     mysqli_query($con,"insert into mst_test(sub_id,test_name,total_que,loginid,lvl) values ('$subid','$testname','$totque','$id','$lvel')") or die(mysqli_error());
     echo"<div class='main'>";
-    echo "<br><br><br><div class=head1>Examen Ajouté <br> <br> <a href='testadd.php'>Cliquez ici pour ajouter un autre Examen</a></div>";
+    echo "<br><br><br><div class=head1>Examen <b> \"$testname \"</b> Ajouté <br> <br> <a href='testadd.php'>Cliquez ici pour ajouter un autre Examen</a></div>";
     exit;
     echo"</div>";
     unset($_POST);
@@ -50,7 +50,7 @@ if($_POST[submit]=='Save' || strlen($_POST['subid'])>0 )
         <form name="form1" method="post" onSubmit="return check();">
             <table class="table table-borderless ">
                 <tr>
-                    <td width="49%" height="32"><div ><strong>Entrez  L'ID Du Sujet</strong></div></td>
+                    <td width="49%" height="32"><div ><strong>Entrez  L'ID Du Module</strong></div></td>
                     <td width="3%" height="5">
                     <td width="48%" height="32"><select style="border-radius: 25px;" class="form-select form-control" name="subid">
                             <?php

@@ -52,11 +52,7 @@ if(isset($update))
                     <td width="45%" height="5">   <input style="display: flex;justify-content: center;" value="<?php echo $res['sub_name']; ?>" class="form-control" name="subname" placeholder="Exp: Base De Données" type="text" id="subname">
                     <td width="20%" height="32">
 
-                <tr>
-                    <td height="26"> </td>
-                    <td><input style="display: flex;justify-content: center;" value="<?php echo $res['niv']; ?>" class="form-control" name="lvel" placeholder="Niveau" type="text" id="lvel" </td>
-                    <td></td>
-                </tr>
+
                 <tr>
                     <td height="26"></td>
                     <td></td>

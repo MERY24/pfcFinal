@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : lun. 05 juil. 2021 à 04:08
+-- Généré le : Dim 11 juil. 2021 à 02:15
 -- Version du serveur :  5.7.31
 -- Version de PHP : 7.3.21
 
@@ -135,21 +135,24 @@ DROP TABLE IF EXISTS `mst_subject`;
 CREATE TABLE IF NOT EXISTS `mst_subject` (
   `sub_id` int(5) NOT NULL AUTO_INCREMENT,
   `sub_name` varchar(25) DEFAULT NULL,
-  `niv` varchar(5) NOT NULL,
   PRIMARY KEY (`sub_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `mst_subject`
 --
 
-INSERT INTO `mst_subject` (`sub_id`, `sub_name`, `niv`) VALUES
-(1, 'VB', 'L3'),
-(2, 'Oracle', 'M1'),
-(3, 'Java', 'L2'),
-(4, 'PHP', 'L3'),
-(5, 'hello', 'L3'),
-(6, 'redaction', 'L3');
+INSERT INTO `mst_subject` (`sub_id`, `sub_name`) VALUES
+(1, 'VB'),
+(2, 'Oracle'),
+(3, 'Java'),
+(4, 'PHP'),
+(5, 'hello'),
+(6, 'redaction'),
+(7, 'hello u'),
+(8, 'hio'),
+(9, 'bg'),
+(10, 'cc');
 
 -- --------------------------------------------------------
 
@@ -168,7 +171,7 @@ CREATE TABLE IF NOT EXISTS `mst_test` (
   PRIMARY KEY (`test_id`),
   KEY `sub_id` (`sub_id`),
   KEY `loginid` (`loginid`)
-) ENGINE=MyISAM AUTO_INCREMENT=17 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=19 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `mst_test`
@@ -183,7 +186,9 @@ INSERT INTO `mst_test` (`test_id`, `sub_id`, `test_name`, `total_que`, `loginid`
 (13, 6, 's1', '2', '', 'L3'),
 (14, 6, 's1', '2', '', 'L3'),
 (15, 6, 's1', '2', '', 'L3'),
-(16, 6, 's1', '2', '', 'L3');
+(16, 6, 's1', '2', '', 'L3'),
+(17, 10, 's1', '2', '', 'L3'),
+(18, 9, 'hi', '2', '', 'L3');
 
 -- --------------------------------------------------------
 
@@ -210,7 +215,10 @@ CREATE TABLE IF NOT EXISTS `mst_user` (
 INSERT INTO `mst_user` (`loginMat`, `pass`, `nom`, `prenom`, `email`, `specialite`, `niv`) VALUES
 ('123456789', 'bejaia06', 'sqdqsd', 'qsdqsd', 'qsdqsd@gmail.com', 'informatique', 'l3'),
 ('987654321', 'bejaia07', 'qsdqsd', 'YACINE', 'qsdqsd@mail.com', 'informatique', 'm1'),
-('1213141516', 'nobaracutie', 'itadori', 'yuji', 'fhdsj@HLn.co', 'jujutsu', 'sor1');
+('1213141516', 'nobaracutie', 'itadori', 'yuji', 'fhdsj@HLn.co', 'jujutsu', 'sor1'),
+('1213141517', 'nobaracutie', 'kugisake', 'nobara', 'nobku@glm.vo', 'jujutsu', 'L1'),
+('1213141518', 'nobaracutie', 'satoru', 'gojo', 'gojosa@gmail.cl', 'jujutsu', '3'),
+('165686317', 'heyyou2021', 'rd', 'bvg', 'n@gj.n', 'gl', 'M1');
 
 -- --------------------------------------------------------
 
@@ -232,6 +240,16 @@ CREATE TABLE IF NOT EXISTS `mst_useranswer` (
   `ansid` int(11) NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`test_id`,`ansid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `mst_useranswer`
+--
+
+INSERT INTO `mst_useranswer` (`sess_id`, `test_id`, `que_des`, `ans1`, `ans2`, `ans3`, `ans4`, `true_ans`, `your_ans`, `ansid`) VALUES
+('3m63babrm1hqpvbiutte7vkour', 9, 'How can you print the object name associated with the last VB  error to the Immediate window?', 'Debug.Print Err.Number', 'Debug.Print Err.Source', 'Debug.Print Err.Description', 'Debug.Print Err.LastDLLError', 2, 2, 4),
+('3m63babrm1hqpvbiutte7vkour', 9, 'How can you print the object name associated with the last VB  error to the Immediate window?', 'Debug.Print Err.Number', 'Debug.Print Err.Source', 'Debug.Print Err.Description', 'Debug.Print Err.LastDLLError', 2, 2, 3),
+('3m63babrm1hqpvbiutte7vkour', 9, 'Which of the follwing contexts are available in the add watch window?', 'Project', 'Module', 'Procedure', 'All', 4, 2, 1),
+('3m63babrm1hqpvbiutte7vkour', 9, 'Which window will allow you to halt the execution of your code when a variable changes?', 'The call stack window', 'The immedite window', 'The locals window', 'The watch window', 4, 1, 2);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
